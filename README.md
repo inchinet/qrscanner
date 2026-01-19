@@ -1,6 +1,7 @@
 # 💡 Lightweight QR Code Scanner
 
 A super lightweight, client-side QR code reader with a modern liquid glass UI, designed for mobile use.
+![UI](https://github.com/inchinet/qrscanner/blob/main/qrscanner.png)
 
 ## ✨ Features
 
