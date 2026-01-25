@@ -1,35 +1,43 @@
-# 💡 Lightweight QR Code Scanner
+# 🔍 Heavy-Duty QR Code Scanner
 
-A super lightweight, client-side QR code reader with a modern liquid glass UI, designed for mobile use.
+A powerful, high-sensitivity client-side QR code reader with a modern **Liquid Glass UI**, specifically optimized for difficult real-world condition photos like restaurant menus and textured surfaces.
+
 ![UI](https://github.com/inchinet/qrscanner/blob/main/qrscanner.png)
 
-## ✨ Features
+## 🚀 Advanced Features
 
-*   **Instant Camera Scan**: Automatically starts scanning with the back camera when the app loads or returns to the foreground.
-*   **Image File Scan**: Option to upload a QR code image from your device.
-*   **Responsive Design**: Optimized for mobile devices.
-*   **Liquid Glass UI**: Modern and visually appealing user interface.
-*   **Direct Link Opening**: Scanned URLs are displayed and can be clicked to open in a new browser tab.
-*   **Clear Feedback**: Provides visual cues and a "Scan Again" button after a successful scan.
+*   **⚡️ Instant Camera Scan**: Automatically starts scanning with the back camera when the app loads.
+*   **🛠️ Heavy-Duty Image Upload**: Enhanced sensitivity for uploaded photos that standard scanners usually fail on.
+*   **🧠 Dual-Library Engine**: Uses both **jsQR** (for speed) and **ZXing** (for robustness) to maximize detection success.
+*   **🧼 Texture & Shadow Crushing**: Advanced "Digital Bleach" preprocessing that clears away 3D shadows, restaurant menu textures, and moiré patterns from screens.
+*   **📱 Responsive Liquid Glass UI**: Optimized for mobile devices with a high-end, premium aesthetic.
+*   **🔗 Direct Link Opening**: Click scanned URLs to open directly in a new browser tab.
 
-## 🚀 How to Use (Local Development)
+## 🛠️ Performance Engine
+
+This scanner doesn't just "look" at the image; it tries **19+ different processing variations** if a code isn't immediately found:
+
+1.  **Shadow-Crushing**: Bleaches the image at multiple thresholds (140, 180, 210) to delete 3D beveled shadows.
+2.  **Texture-Crushing**: Aggressive downscaling (25%, 50%, 75%) to "melt" away background grain and grid noise.
+3.  **Denoising & Blur**: Gaussian and Median filters to remove "speckle" noise from physical surfaces.
+4.  **Try Harder Mode**: Enabled industry-standard ZXing heuristics for distorted/warped codes.
+
+## 🚀 How to Use
 
 1.  Open `index.html` in your web browser.
-2.  Grant camera permissions when prompted.
-3.  Point your device's camera at a QR code, or use the "Scan from Image" button to upload a file.
+2.  Grant camera permissions.
+3.  **Camera**: Point and scan instantly.
+4.  **Image Upload**: If a photo fails elsewhere, upload it here. The scanner will run its multi-stage "Heavy-Duty" cycle to find the hidden code.
 
-## 🌐 Deployment
+## 📦 Deployment
 
-This application is entirely client-side (HTML, CSS, JavaScript) and requires no backend server logic for its core functionality.
+This is a **100% client-side** application.
 
-To deploy:
+1.  Upload the `qrscanner` folder to your server.
+2.  Works on any static host like GitHub Pages, Vercel, or traditional Apache/Nginx servers.
 
-1.  Upload the entire `qrscanner` folder to your web server's document root (e.g., `/var/www/html/qrscanner/` for Apache/Nginx).
-2.  Access the application via your server's URL (e.g., `http://yourdomain.com/qrscanner/index.html`).
+## 📚 Powered By
 
-## 🛠️ Technologies Used
-
-*   HTML5
-*   CSS3 (with Liquid Glass UI effects)
-*   JavaScript (ES6+)
-*   [jsQR](https://github.com/cozmo/jsQR) for QR code detection.
+*   [jsQR](https://github.com/cozmo/jsQR) (Fast Live Scanning)
+*   [ZXing](https://github.com/zxing-js/library) (Heavy-Duty Robust Detection)
+*   **Custom Image Preprocessing Engine** (Shadow & Texture Neutralization)

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Scanner</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h1>QR Code Scanner</h1>
@@ -21,7 +23,8 @@
         </div>
 
         <div class="result-container">
-            <p><span id="scan-label" style="display: none;">Scanned: </span><a id="qr-result" target="_blank" rel="noopener noreferrer"></a></p>
+            <p><span id="scan-label" style="display: none;">Scanned: </span><a id="qr-result" target="_blank"
+                    rel="noopener noreferrer"></a></p>
         </div>
 
         <div class="controls">
@@ -33,7 +36,11 @@
         </div>
     </div>
 
+    <!-- jsQR for fast live camera scanning -->
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.1.0/dist/jsQR.min.js"></script>
+    <!-- ZXing for robust image upload detection -->
+    <script src="https://unpkg.com/@zxing/library@0.20.0/umd/index.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
